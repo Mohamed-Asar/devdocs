@@ -79,7 +79,8 @@ task index: %w[init] do
   puts 'Generating index for Algolia ...'
   sh 'bin/jekyll',
         'algolia',
-          '--config=_config.yml,_config.index.yml'
+          '--config=_config.yml,_config.index.yml',
+          '--dry-run'
 end
 
 desc 'Convert HTML text to kramdown in your terminal'
